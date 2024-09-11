@@ -25,27 +25,20 @@ class MainActivity : ComponentActivity() {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
-//            HelloWorldButtonTheme {
-//                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-//                    Greeting(
-//                        name = "World",
-//                        modifier = Modifier.padding(innerPadding)
-//                    )
-//                }
-//            }
             HWButton()
         }
     }
 }
+
 @Composable
-fun HWButton(){
+fun HWButton() {
     var num = remember { mutableIntStateOf(0) }
 
-    Button( modifier = Modifier.padding(all = 100.dp) ,
+    Button(modifier = Modifier.padding(all = 100.dp),
         onClick = {
             num.intValue += 1
 
-    }) {
+        }) {
         Text(text = "Click Me")
 
     }
@@ -60,16 +53,7 @@ fun HWButton(){
 
     }
 
-
 }
-
-
-//@Composable
-//fun Greeting(name: String) {
-//    Text(
-//        text = "Hello $name!"
-//    )
-//}
 
 
 @Preview(showBackground = true)
